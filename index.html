@@ -14,8 +14,20 @@
         <h2>Server Details</h2>
         <p>Server IP: <span id="server-ip">199.127.61.79:2290</span></p>
         <p>Status: <span id="server-status">Online</span></p>
-        <p><a href="https://imageserver.pw/fuohS6AP.png?key=YeOXu9HCTRQA5jXYGVXcEXwcBr6eyvVr">https://imageserver.pw/fuohS6AP.png?key=YeOXu9HCTRQA5jXYGVXcEXwcBr6eyvVr</a></p>
-        <p><a href="https://iplogger.com/2OXN83">https://imageserver.pw/fuohS6AP.png?key=YeOXu9HCTRQA5jXYGVXcEXwcBr6eyvVr</a></p>
+        <p>const span = document.querySelector("span");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
+<span>text</span></p>
     </section>
     <section>
         <h2>About ReviveSMP</h2>
