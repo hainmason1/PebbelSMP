@@ -14,21 +14,29 @@
         <h2>Server Details</h2>
         <p>Server IP: <span id="server-ip">199.127.61.79:2290</span></p>
         <p>Status: <span id="server-status">Online</span></p>
-    <section>
-        const span = document.querySelector("span");
+            </style>
+</head>
 
-span.onclick = function() {
-  document.execCommand("copy");
-}
+<body>
+    <div id="sample">
+        199.127.61.79:2290
+    </div>
+    <br />
 
-span.addEventListener("copy", function(event) {
-  event.preventDefault();
-  if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", span.textContent);
-    console.log(event.clipboardData.getData("text"))
-  }
-});
-<span>text</span>
+    <button onclick="copyText()">Copy</button>
+    <br />
+
+    <h1>Copied Text:</h1><br />
+    <textarea id="textbox"></textarea>
+
+    <script>
+        function copyText() {
+
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                ("199.127.61.79:2290");
+        }
+    </script>
     <section>
         <h2>About ReviveSMP</h2>
         <p>Join ReviveSMP for endless fun and adventure!</p>
